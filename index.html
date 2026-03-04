@@ -465,73 +465,53 @@ textarea.inp{resize:vertical;min-height:55px;}
 
 <script>
 // ==================== DATA ====================
-const DEFAULT_CATS=[
-  {id:'general',icon:'🌍',name:'معلومات عامة',desc:'أسئلة متنوعة وممتعة'},
-  {id:'geo',icon:'🗺️',name:'جغرافيا',desc:'دول وعواصم ومدن'},
-  {id:'sports',icon:'⚽',name:'رياضة',desc:'كرة قدم وأكثر'},
-  {id:'science',icon:'🔬',name:'علوم',desc:'كيمياء وفيزياء وطب'},
-  {id:'letters',icon:'📝',name:'حروف',desc:'لغة عربية وكلمات'},
-  {id:'riddles',icon:'🧩',name:'ألغاز',desc:'فكر وحل وتسلية'},
-  {id:'fursan',icon:'🐎',name:'مدرسة الفرسان',desc:'مدارس الفرسان الأهلية المكية'},
-  {id:'founding',icon:'🌴',name:'يوم التأسيس',desc:'تأسيس المملكة العربية السعودية'},
-  {id:'national',icon:'🇸🇦',name:'اليوم الوطني',desc:'يوم المملكة العربية السعودية'},
-  {id:'ramadan',icon:'🌙',name:'رمضان',desc:'شهر رمضان المبارك'},
-];
+const HARD_QUESTIONS = {
 
-const DEFAULT_QUESTIONS={
   general:[
-    {q:'كم عدد أيام الأسبوع؟',opts:['5','6','7','8'],correctOpt:2,openEnded:false,ans:''},
-    {q:'ما عاصمة المملكة العربية السعودية؟',opts:['جدة','الرياض','مكة','الدمام'],correctOpt:1,openEnded:false,ans:''},
-    {q:'كم عدد ألوان قوس قزح؟',opts:['5','6','7','8'],correctOpt:2,openEnded:false,ans:''},
-    {q:'ما هو أكبر حيوان في العالم؟',opts:['الفيل','الحوت الأزرق','الزرافة','الأسد'],correctOpt:1,openEnded:false,ans:''},
-    {q:'كم عدد فصول السنة؟',opts:['2','3','4','5'],correctOpt:2,openEnded:false,ans:''},
-    {q:'في أي قارة تقع السعودية؟',opts:['أفريقيا','آسيا','أوروبا','أمريكا'],correctOpt:1,openEnded:false,ans:''},
+    {q:'في أي سنة أُعلن توحيد المملكة العربية السعودية؟',opts:['1902','1927','1932','1945'],correctOpt:2,openEnded:false,ans:''},
+    {q:'كم عدد العظام في جسم الإنسان البالغ؟',opts:['198','206','212','224'],correctOpt:1,openEnded:false,ans:''},
+    {q:'ما هو العنصر الأكثر وفرة في الكون؟',opts:['الأكسجين','الهيدروجين','الهيليوم','الكربون'],correctOpt:1,openEnded:false,ans:''},
+    {q:'ما هي أطول سورة في القرآن الكريم؟',opts:['آل عمران','النساء','البقرة','الأعراف'],correctOpt:2,openEnded:false,ans:''},
+    {q:'من هو مخترع المصباح الكهربائي عمليًا؟',opts:['نيوتن','تسلا','إديسون','غراهام بيل'],correctOpt:2,openEnded:false,ans:''},
+    {q:'كم عدد أضلاع الشكل السداسي؟',opts:['5','6','7','8'],correctOpt:1,openEnded:false,ans:''},
   ],
 
   geo:[
-    {q:'ما عاصمة فرنسا؟',opts:['مدريد','روما','باريس','برلين'],correctOpt:2,openEnded:false,ans:''},
-    {q:'أين تقع الأهرامات؟',opts:['السعودية','مصر','المغرب','الأردن'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما أكبر قارة في العالم؟',opts:['أفريقيا','آسيا','أوروبا','أمريكا'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما عاصمة مصر؟',opts:['الإسكندرية','القاهرة','الأقصر','أسوان'],correctOpt:1,openEnded:false,ans:''},
-    {q:'أي بحر يقع غرب السعودية؟',opts:['البحر الأحمر','الخليج العربي','بحر العرب','المتوسط'],correctOpt:0,openEnded:false,ans:''},
-    {q:'ما عاصمة الإمارات؟',opts:['دبي','الشارقة','أبوظبي','العين'],correctOpt:2,openEnded:false,ans:''},
+    {q:'ما هي أكبر دولة في العالم من حيث المساحة؟',opts:['كندا','الصين','الولايات المتحدة','روسيا'],correctOpt:3,openEnded:false,ans:''},
+    {q:'ما هي الدولة التي يمر بها خط الاستواء وخط غرينتش معًا؟',opts:['البرازيل','الكونغو','إندونيسيا','غانا'],correctOpt:3,openEnded:false,ans:''},
+    {q:'ما هي عاصمة كازاخستان الحالية؟',opts:['ألماتي','أستانا','طشقند','كييف'],correctOpt:1,openEnded:false,ans:''},
+    {q:'أين يقع مضيق هرمز؟',opts:['بين عمان وإيران','بين السعودية ومصر','بين قطر والإمارات','بين العراق والكويت'],correctOpt:0,openEnded:false,ans:''},
+    {q:'ما أطول نهر في العالم وفق أحدث الدراسات؟',opts:['الأمازون','النيل','اليانغتسي','المسيسيبي'],correctOpt:0,openEnded:false,ans:''},
+    {q:'كم عدد دول قارة أفريقيا؟',opts:['52','54','56','58'],correctOpt:1,openEnded:false,ans:''},
   ],
 
   sports:[
-    {q:'كم لاعب في فريق كرة القدم داخل الملعب؟',opts:['9','10','11','12'],correctOpt:2,openEnded:false,ans:''},
-    {q:'أي رياضة تستخدم الكرة البرتقالية؟',opts:['الطائرة','السلة','اليد','التنس'],correctOpt:1,openEnded:false,ans:''},
-    {q:'كم شوط في مباراة كرة القدم؟',opts:['1','2','3','4'],correctOpt:1,openEnded:false,ans:''},
-    {q:'من يستخدم المضرب؟',opts:['لاعب التنس','لاعب كرة القدم','السباح','العداء'],correctOpt:0,openEnded:false,ans:''},
-    {q:'كم عدد حلقات شعار الأولمبياد؟',opts:['4','5','6','7'],correctOpt:1,openEnded:false,ans:''},
-    {q:'أي دولة فازت بكأس العالم 2022؟',opts:['البرازيل','فرنسا','الأرجنتين','ألمانيا'],correctOpt:2,openEnded:false,ans:''},
+    {q:'من هو هداف كأس العالم 2014؟',opts:['ميسي','مولر','رونالدو','نيمار'],correctOpt:1,openEnded:false,ans:''},
+    {q:'كم مرة فازت البرازيل بكأس العالم؟',opts:['4','5','6','7'],correctOpt:1,openEnded:false,ans:''},
+    {q:'في أي دولة أُقيمت أول دورة ألعاب أولمبية حديثة؟',opts:['فرنسا','اليونان','إيطاليا','ألمانيا'],correctOpt:1,openEnded:false,ans:''},
+    {q:'كم طول مضمار سباق 400 متر؟',opts:['200م','300م','400م','500م'],correctOpt:2,openEnded:false,ans:''},
+    {q:'من أكثر لاعب تتويجًا بدوري أبطال أوروبا؟',opts:['رونالدو','ميسي','راموس','مودريتش'],correctOpt:0,openEnded:false,ans:''},
+    {q:'كم عدد أشواط مباراة كرة السلة الرسمية؟',opts:['2','3','4','5'],correctOpt:2,openEnded:false,ans:''},
   ],
 
   science:[
-    {q:'ما الكوكب الذي نعيش عليه؟',opts:['المريخ','الأرض','الزهرة','عطارد'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما الغاز الذي نتنفسه؟',opts:['الأكسجين','الهيدروجين','النيتروجين','ثاني أكسيد الكربون'],correctOpt:0,openEnded:false,ans:''},
-    {q:'كم عدد الكواكب في النظام الشمسي؟',opts:['7','8','9','10'],correctOpt:1,openEnded:false,ans:''},
-    {q:'الماء يتكون من الهيدروجين و؟',opts:['النيتروجين','الأكسجين','الكربون','الحديد'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما أسرع حيوان بري؟',opts:['الفهد','الأسد','الحصان','النمر'],correctOpt:0,openEnded:false,ans:''},
-    {q:'ما لون الشمس؟',opts:['أحمر','أصفر','أزرق','أخضر'],correctOpt:1,openEnded:false,ans:''},
-  ],
-
-  letters:[
-    {q:'كم حرف في الأبجدية العربية؟',opts:['26','27','28','29'],correctOpt:2,openEnded:false,ans:''},
-    {q:'ما أول حرف في كلمة "تفاح"؟',opts:['ت','ف','ا','ح'],correctOpt:0,openEnded:false,ans:''},
-    {q:'ما جمع كلمة "كتاب"؟',opts:['كتب','كتابات','كاتب','كتابين'],correctOpt:0,openEnded:false,ans:''},
-    {q:'ما ضد كلمة "كبير"؟',opts:['طويل','صغير','قصير','عالي'],correctOpt:1,openEnded:false,ans:''},
-    {q:'أي كلمة تعني "منزل"؟',opts:['بيت','قلم','باب','شباك'],correctOpt:0,openEnded:false,ans:''},
-    {q:'أي حرف يأتي بعد الألف؟',opts:['ب','ت','ث','ج'],correctOpt:0,openEnded:false,ans:''},
+    {q:'ما هو أسرع شيء في الكون؟',opts:['الصوت','الضوء','الرياح','الكهرباء'],correctOpt:1,openEnded:false,ans:''},
+    {q:'ما اسم المجرة التي ينتمي إليها كوكب الأرض؟',opts:['أندروميدا','درب التبانة','سومبريرو','المرأة المسلسلة'],correctOpt:1,openEnded:false,ans:''},
+    {q:'ما عدد أزواج الكروموسومات في الإنسان؟',opts:['23','46','44','48'],correctOpt:0,openEnded:false,ans:''},
+    {q:'من وضع قانون الجاذبية؟',opts:['آينشتاين','نيوتن','غاليلو','كوبرنيكوس'],correctOpt:1,openEnded:false,ans:''},
+    {q:'ما العنصر الذي رمزه Fe؟',opts:['فضة','فلور','حديد','فسفور'],correctOpt:2,openEnded:false,ans:''},
+    {q:'كم عدد صمامات القلب؟',opts:['2','3','4','5'],correctOpt:2,openEnded:false,ans:''},
   ],
 
   riddles:[
-    {q:'شيء إذا أخذت منه كبر، ما هو؟',opts:['الحفرة','المال','الوقت','العمر'],correctOpt:0,openEnded:false,ans:''},
-    {q:'له أسنان ولا يعض، ما هو؟',opts:['الأسد','المشط','الكلب','التمساح'],correctOpt:1,openEnded:false,ans:''},
-    {q:'يمشي بلا قدمين، ما هو؟',opts:['السيارة','السحاب','الماء','القطار'],correctOpt:2,openEnded:false,ans:''},
-    {q:'أين يقع البحر الذي لا ماء فيه؟',opts:['الخريطة','الصحراء','الجبل','المدينة'],correctOpt:0,openEnded:false,ans:''},
-    {q:'كلما زاد نقص، ما هو؟',opts:['العمر','المال','الطعام','النوم'],correctOpt:0,openEnded:false,ans:''},
-    {q:'له مفاتيح ولا يفتح باب، ما هو؟',opts:['البيانو','القفل','السيارة','البيت'],correctOpt:0,openEnded:false,ans:''},
+    {q:'ما هو الشيء الذي كلما أخذت منه كبر أكثر وأكثر؟',opts:['الحفرة','السر','النار','الظل'],correctOpt:0,openEnded:false,ans:''},
+    {q:'أخضر في الأرض وأسود في السوق وأحمر في البيت، ما هو؟',opts:['الشاي','الفلفل','القهوة','البطيخ'],correctOpt:2,openEnded:false,ans:''},
+    {q:'شيء يمشي ويقف وليس له أرجل، ما هو؟',opts:['الساعة','النهر','السيارة','القلم'],correctOpt:0,openEnded:false,ans:''},
+    {q:'ما هو الباب الذي لا يمكن فتحه؟',opts:['باب الغرفة','باب السيارة','الباب المفتوح','الباب في الحلم'],correctOpt:3,openEnded:false,ans:''},
+    {q:'شيء يولد كبيرًا ثم يصغر مع الوقت، ما هو؟',opts:['العمر','الشجرة','الشمعة','القمر'],correctOpt:2,openEnded:false,ans:''},
+    {q:'له رأس ولا عين له، ما هو؟',opts:['الدبوس','الإنسان','الحجر','الساعة'],correctOpt:0,openEnded:false,ans:''},
   ],
+
 };
   
 const BOX_PTS=[200,400,600];
