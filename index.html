@@ -17,7 +17,6 @@ html,body{height:100%;}
 body{font-family:'Cairo',sans-serif;background:var(--b);color:var(--text);min-height:100vh;overflow-x:hidden;}
 .screen{display:none;min-height:100vh;}
 .screen.active{display:flex;}
-
 .btn-y{background:var(--y);color:#000;border:none;border-radius:12px;padding:12px 30px;font-family:'Cairo',sans-serif;font-weight:900;font-size:.95rem;cursor:pointer;transition:transform .15s,box-shadow .15s;display:inline-flex;align-items:center;gap:7px;}
 .btn-y:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(255,215,0,.28);}
 .btn-y:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none;}
@@ -27,17 +26,12 @@ body{font-family:'Cairo',sans-serif;background:var(--b);color:var(--text);min-he
 .inp:focus{outline:none;border-color:var(--y);}
 textarea.inp{resize:vertical;min-height:55px;}
 .lbl{font-size:.7rem;color:var(--muted2);font-weight:700;margin-bottom:4px;}
-
-/* S1 */
 #s-cats{flex-direction:column;align-items:center;padding:44px 20px 70px;background:radial-gradient(ellipse 80% 50% at 50% 0%,#16143a 0%,var(--b) 65%);}
 .pg-title{font-size:clamp(2rem,7vw,3rem);font-weight:900;color:var(--y);text-align:center;margin-bottom:6px;}
 .pg-sub{color:var(--muted2);font-size:.9rem;text-align:center;margin-bottom:26px;}
-
-/* Nav bar on home */
 .home-nav{display:flex;gap:10px;justify-content:center;margin-bottom:20px;}
 .nav-lb-btn{background:var(--b4);border:2px solid var(--border2);color:var(--muted2);border-radius:11px;padding:9px 20px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:7px;}
 .nav-lb-btn:hover{border-color:var(--y);color:var(--y);}
-
 .sel-bar{width:100%;max-width:840px;background:var(--b4);border:1px solid var(--border2);border-radius:13px;padding:12px 22px;text-align:center;font-weight:700;color:var(--muted2);font-size:.88rem;margin-bottom:18px;transition:color .3s;}
 .sel-bar.has{color:var(--y);}
 .setup-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:13px;width:100%;max-width:840px;margin-bottom:26px;}
@@ -52,8 +46,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .scat-meta{display:flex;gap:6px;}
 .spill{background:var(--b5);border:1px solid var(--border2);color:var(--muted2);border-radius:7px;padding:2px 9px;font-size:.68rem;font-weight:700;}
 .next-row{width:100%;max-width:840px;display:flex;justify-content:flex-start;}
-
-/* S2 */
 #s-questions{flex-direction:column;align-items:center;padding:36px 20px 70px;background:radial-gradient(ellipse 80% 40% at 50% 0%,#141230 0%,var(--b) 60%);}
 .qed-wrap{width:100%;max-width:900px;}
 .qed-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;}
@@ -77,8 +69,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .opt-row{display:flex;gap:7px;align-items:center;}
 .cdot{width:11px;height:11px;flex-shrink:0;border-radius:50%;background:var(--b6);border:2px solid var(--border2);cursor:pointer;transition:all .2s;}
 .cdot.on{background:var(--y);border-color:var(--y);}
-
-/* S3 */
 #s-teams{flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;background:radial-gradient(ellipse 80% 50% at 50% 30%,#16143a 0%,var(--b) 70%);}
 .teams-form{width:100%;max-width:480px;display:flex;flex-direction:column;gap:18px;}
 .teams-form h2{font-size:clamp(2rem,7vw,2.8rem);font-weight:900;color:var(--y);text-align:center;}
@@ -87,8 +77,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .tinp{width:100%;background:var(--b4);border:2px solid var(--border2);border-radius:11px;padding:12px 14px;color:var(--text);font-family:'Cairo',sans-serif;font-size:.95rem;text-align:right;transition:border-color .2s;}
 .tinp:focus{outline:none;border-color:var(--y);}
 .ierr{color:#ff5555;font-size:.72rem;display:none;}
-
-/* S4 - GAME BOARD */
 #s-game{flex-direction:column;background:var(--b2);}
 .gbar{background:var(--b3);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
 .gbar-logo{font-size:1rem;font-weight:900;color:var(--y);}
@@ -115,8 +103,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .pts-mid-num{font-size:.7rem;font-weight:900;color:var(--y);}
 .col-icon{font-size:1.4rem;line-height:1;}
 .col-name{font-size:.58rem;font-weight:900;text-align:center;color:var(--muted2);line-height:1.2;max-width:60px;}
-
-/* S5 - QUESTION SCREEN */
 #s-question{flex-direction:row;background:var(--b2);min-height:100vh;position:relative;}
 .q-timer-fixed{position:fixed;top:14px;right:18px;background:var(--y);color:#000;border-radius:10px;padding:7px 22px;font-weight:900;font-size:1.1rem;z-index:100;transition:all .3s;}
 .q-timer-fixed.warn{background:#ff8800;color:#fff;}
@@ -164,8 +150,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .who-split{background:var(--b5);border-color:#7b61ff;color:#a78bfa;}
 .who-split:hover{background:rgba(123,97,255,.15);border-color:#a78bfa;transform:scale(1.05);}
 .who-btn:hover{transform:scale(1.05);}
-
-/* S6 - RESULT */
 #s-result{flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:radial-gradient(ellipse 80% 60% at 50% 30%,#1c1600 0%,var(--b) 70%);gap:7px;}
 .r-trophy{font-size:4.5rem;}
 .r-winner{font-size:clamp(2rem,8vw,3.2rem);font-weight:900;color:var(--y);text-shadow:0 0 38px rgba(255,215,0,.4);}
@@ -178,16 +162,12 @@ textarea.inp{resize:vertical;min-height:55px;}
 .r-save-btn{background:var(--b4);border:2px solid var(--border2);color:var(--muted2);border-radius:11px;padding:10px 22px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:7px;margin-bottom:8px;}
 .r-save-btn:hover{border-color:var(--y);color:var(--y);}
 .r-btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
-
-/* ===================== LEADERBOARD SCREEN ===================== */
 #s-lb{flex-direction:column;align-items:center;padding:44px 20px 70px;background:radial-gradient(ellipse 80% 50% at 50% 0%,#16143a 0%,var(--b) 65%);}
 .lb-wrap{width:100%;max-width:700px;display:flex;flex-direction:column;gap:0;}
 .lb-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;}
 .lb-title{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:900;color:var(--y);}
 .lb-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;min-height:60px;}
 .lb-empty{color:var(--muted2);font-size:.9rem;text-align:center;padding:32px 0;}
-
-/* Leaderboard row */
 .lb-row{background:var(--b4);border:1.5px solid var(--border2);border-radius:14px;padding:14px 18px;display:flex;align-items:center;gap:14px;transition:border-color .2s;position:relative;overflow:hidden;}
 .lb-row.top1{border-color:var(--y);background:rgba(255,215,0,.05);}
 .lb-row.top2{border-color:#c0c0c0;background:rgba(192,192,192,.04);}
@@ -205,8 +185,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .lb-edit-btn,.lb-del-btn{background:none;border:1.5px solid var(--border2);border-radius:8px;padding:5px 10px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.72rem;cursor:pointer;transition:all .2s;color:var(--muted2);}
 .lb-edit-btn:hover{border-color:var(--y);color:var(--y);}
 .lb-del-btn:hover{border-color:#ff3737;color:#ff3737;}
-
-/* Modal overlay */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);z-index:500;display:none;align-items:center;justify-content:center;padding:20px;}
 .modal-overlay.open{display:flex;}
 .modal-box{background:var(--b3);border:1.5px solid var(--border2);border-radius:20px;padding:28px 24px;width:100%;max-width:380px;display:flex;flex-direction:column;gap:16px;animation:mslide .25s ease;}
@@ -218,8 +196,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .modal-inp:focus{outline:none;border-color:var(--y);}
 .modal-inp.num{text-align:center;font-size:1.2rem;font-weight:900;}
 .modal-btns{display:flex;gap:10px;justify-content:center;}
-
-/* ===================== CONFIRM MODAL ===================== */
 #confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);z-index:600;display:none;align-items:center;justify-content:center;padding:20px;}
 #confirm-overlay.open{display:flex;}
 .confirm-box{background:var(--b3);border:1.5px solid var(--border2);border-radius:20px;padding:28px 24px;width:100%;max-width:340px;display:flex;flex-direction:column;gap:16px;align-items:center;animation:mslide .25s ease;}
@@ -230,8 +206,6 @@ textarea.inp{resize:vertical;min-height:55px;}
 .confirm-yes:hover{background:#ff1111;transform:scale(1.03);}
 .confirm-no{background:var(--b5);border:1.5px solid var(--border2);color:var(--muted2);border-radius:10px;padding:10px 26px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .2s;flex:1;}
 .confirm-no:hover{border-color:var(--muted2);color:var(--text);}
-
-/* ===================== TOAST ===================== */
 #toast-wrap{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:700;display:flex;flex-direction:column;align-items:center;gap:9px;pointer-events:none;}
 .toast{background:var(--b3);border:1.5px solid var(--border2);border-radius:12px;padding:10px 22px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.88rem;color:var(--text);display:flex;align-items:center;gap:9px;box-shadow:0 8px 28px rgba(0,0,0,.5);animation:tslide .3s ease;white-space:nowrap;}
 .toast.success{border-color:#00d26e;background:rgba(0,210,110,.08);color:#00d26e;}
@@ -240,13 +214,10 @@ textarea.inp{resize:vertical;min-height:55px;}
 .toast.hide{animation:thide .3s ease forwards;}
 @keyframes tslide{from{opacity:0;transform:translateY(-14px);}to{opacity:1;transform:translateY(0);}}
 @keyframes thide{from{opacity:1;transform:translateY(0);}to{opacity:0;transform:translateY(-14px);}}
-
-/* misc */
 .cp{position:fixed;top:-20px;border-radius:2px;animation:cfall linear forwards;z-index:999;pointer-events:none;}
 @keyframes cfall{to{transform:translateY(110vh) rotate(720deg);opacity:0;}}
 #flash{position:fixed;inset:0;background:rgba(255,215,0,.08);pointer-events:none;opacity:0;transition:opacity .18s;z-index:200;}
 #flash.on{opacity:1;}
-
 @media(max-width:760px){
   .cats-board{grid-template-columns:repeat(2,1fr);}
   #s-question{flex-direction:column;}
@@ -415,7 +386,7 @@ textarea.inp{resize:vertical;min-height:55px;}
   </div>
 </div>
 
-<!-- S6 - RESULT -->
+<!-- S6 -->
 <div class="screen" id="s-result">
   <div class="r-trophy" id="r-trophy">🏆</div>
   <div class="r-winner" id="r-winner">-</div>
@@ -431,7 +402,7 @@ textarea.inp{resize:vertical;min-height:55px;}
   </div>
 </div>
 
-<!-- S7 - LEADERBOARD -->
+<!-- S7 -->
 <div class="screen" id="s-lb">
   <div class="lb-wrap">
     <div class="lb-header">
@@ -449,7 +420,7 @@ textarea.inp{resize:vertical;min-height:55px;}
 </div>
 
 <!-- CONFIRM MODAL -->
-<div id="confirm-overlay" style="display:none;">
+<div id="confirm-overlay">
   <div class="confirm-box">
     <div class="confirm-icon" id="confirm-icon">🗑</div>
     <div class="confirm-msg" id="confirm-msg">هل أنت متأكد؟</div>
@@ -460,60 +431,89 @@ textarea.inp{resize:vertical;min-height:55px;}
   </div>
 </div>
 
-<!-- TOAST CONTAINER -->
 <div id="toast-wrap"></div>
 
 <script>
 // ==================== DATA ====================
-const DEFAULT_CATS = {
+// DEFAULT_CATS must be an ARRAY so .find() and .forEach() work
+const DEFAULT_CATS = [
+  {
+    id:'general',icon:'🧠',name:'معلومات عامة',desc:'أسئلة متنوعة تحدّي عقلك',
+    questions:[
+      // 200 نقطة
+      {q:'ما اسم المعاهدة التي أنهت الحرب العالمية الأولى رسمياً عام 1919؟',opts:['معاهدة فرساي','معاهدة باريس','اتفاقية جنيف','ميثاق عصبة الأمم'],correctOpt:0,openEnded:false,ans:''},
+      {q:'كم عدد الحروف في اللغة العربية الفصحى؟',opts:['26','28','30','32'],correctOpt:1,openEnded:false,ans:''},
+      // 400 نقطة
+      {q:'من كتب رواية "ألف شمس مشرقة"؟',opts:['نجيب محفوظ','خالد حسيني','غابرييل غارسيا ماركيز','أورهان باموق'],correctOpt:1,openEnded:false,ans:''},
+      {q:'أيّ من هذه الدول لا تمرّ بها نهر النيل؟',opts:['إثيوبيا','السودان','تشاد','مصر'],correctOpt:2,openEnded:false,ans:''},
+      // 600 نقطة
+      {q:'ما الفيلسوف الذي قال "أنا أفكر إذن أنا موجود"؟',opts:['سقراط','أرسطو','رينيه ديكارت','إيمانويل كانط'],correctOpt:2,openEnded:false,ans:''},
+      {q:'في عام كم اخترع تيم بيرنرز-لي شبكة الويب العالمية؟',opts:['1983','1989','1993','1997'],correctOpt:1,openEnded:false,ans:''},
+    ]
+  },
+  {
+    id:'geo',icon:'🌍',name:'جغرافيا',desc:'دول وعواصم وأماكن',
+    questions:[
+      {q:'ما هي أعمق بحيرة في العالم؟',opts:['بحيرة سوبيريور','بحيرة بايكال','بحيرة تنجانيقا','بحيرة فيكتوريا'],correctOpt:1,openEnded:false,ans:''},
+      {q:'كم تبلغ مساحة المملكة العربية السعودية تقريباً بالكيلومتر المربع؟',opts:['1.5 مليون','2 مليون','2.15 مليون','2.5 مليون'],correctOpt:2,openEnded:false,ans:''},
+      {q:'ما اسم الصحراء الأكبر في العالم بعد القطب الجنوبي؟',opts:['صحراء غوبي','صحراء أتاكاما','الصحراء الكبرى','صحراء ربع الخالي'],correctOpt:2,openEnded:false,ans:''},
+      {q:'أيّ دولة تملك أطول حدود برية في العالم؟',opts:['روسيا','الصين','كندا','الولايات المتحدة'],correctOpt:0,openEnded:false,ans:''},
+      {q:'ما اسم المضيق الذي يفصل بين قارتي أوروبا وأفريقيا؟',opts:['مضيق هرمز','مضيق ملقا','مضيق جبل طارق','مضيق البوسفور'],correctOpt:2,openEnded:false,ans:''},
+      {q:'ما هي الدولة الوحيدة التي تحيط بها دولة واحدة من جميع الجهات؟',opts:['موناكو','الفاتيكان','سان مارينو','ليسوتو'],correctOpt:3,openEnded:false,ans:''},
+    ]
+  },
+  {
+    id:'sports',icon:'⚽',name:'رياضة',desc:'كرة وبطولات وأرقام',
+    questions:[
+      {q:'كم مرة فاز نادي ريال مدريد بدوري أبطال أوروبا حتى 2024؟',opts:['12','14','15','16'],correctOpt:2,openEnded:false,ans:''},
+      {q:'من يحمل الرقم القياسي لأسرع إنسان عدواً في التاريخ؟',opts:['كارل لويس','أسافا باول','يوسين بولت','تايسون غاي'],correctOpt:2,openEnded:false,ans:''},
+      {q:'في أي مدينة أُقيمت دورة الألعاب الأولمبية الصيفية 2020 (المؤجلة)؟',opts:['بكين','سيول','طوكيو','سيدني'],correctOpt:2,openEnded:false,ans:''},
+      {q:'كم عدد لاعبي كل فريق في كرة الماء؟',opts:['6','7','8','9'],correctOpt:1,openEnded:false,ans:''},
+      {q:'أيّ لاعب فاز بجائزة كرة القدم لأفضل لاعب في العالم FIFA 2023؟',opts:['إيرلينغ هالاند','كيليان مبابي','ليونيل ميسي','كريم بنزيمة'],correctOpt:2,openEnded:false,ans:''},
+      {q:'ما اسم البطولة التي تُلاعب فيها أفضل 8 أندية في كل قارة؟',opts:['الكأس الدولية','كأس العالم للأندية','كأس الكونفدرالية','دوري الأبطال الدولي'],correctOpt:1,openEnded:false,ans:''},
+    ]
+  },
+  {
+    id:'science',icon:'🔬',name:'علوم',desc:'فيزياء وكيمياء وأحياء',
+    questions:[
+      {q:'ما اسم الجسيم الذي يُسمّى "جسيم الله" ويمنح الكتلة للمادة؟',opts:['الكوارك','البوزيترون','بوزون هيغز','النيوترينو'],correctOpt:2,openEnded:false,ans:''},
+      {q:'كم يبلغ عدد نيوترونات ذرة الكربون-14؟',opts:['6','7','8','14'],correctOpt:2,openEnded:false,ans:''},
+      {q:'ما اسم العالم الذي اكتشف مبدأ عدم اليقين في ميكانيكا الكم؟',opts:['نيلز بور','ماكس بلانك','فيرنر هايزنبرغ','إرفين شرودنغر'],correctOpt:2,openEnded:false,ans:''},
+      {q:'ما الرقم التقريبي لعدد أفورغادرو؟',opts:['6.02×10²²','6.02×10²³','6.02×10²⁴','6.02×10²⁵'],correctOpt:1,openEnded:false,ans:''},
+      {q:'ما هي الغدة التي تُعرف بـ"ساعة الجسم البيولوجية" وتُفرز هرمون الميلاتونين؟',opts:['الغدة الدرقية','الغدة الصعترية','الغدة الصنوبرية','الغدة النخامية'],correctOpt:2,openEnded:false,ans:''},
+      {q:'ما الغاز الذي يشكّل نحو 78% من الغلاف الجوي للأرض؟',opts:['الأكسجين','ثاني أكسيد الكربون','النيتروجين','الأرغون'],correctOpt:2,openEnded:false,ans:''},
+    ]
+  },
+  {
+    id:'riddles',icon:'🧩',name:'ألغاز',desc:'فكر وحل الألغاز',
+    questions:[
+      {q:'كلما أضفت إليّ شيئاً، أصبحت أخف. ما أنا؟',opts:['الهواء','الثقب','الحفرة','الفراغ'],correctOpt:1,openEnded:false,ans:''},
+      {q:'لا فم لي ولكنني أخبرك بالوقت، لا يد لي ولكنني أدقّ. ما أنا؟',opts:['التقويم','الساعة','الراديو','النجوم'],correctOpt:1,openEnded:false,ans:''},
+      {q:'ما الشيء الذي كلما سرعت، ازددت فقداناً له؟',opts:['الوقت','النفَس','الذاكرة','التوازن'],correctOpt:1,openEnded:false,ans:''},
+      {q:'أمشي بلا أرجل، وأبكي بلا عيون، وأعطيك الحياة. ما أنا؟',opts:['النار','الغيمة','البحر','الريح'],correctOpt:1,openEnded:false,ans:''},
+      {q:'في البداية آكلكَ، وفي النهاية تأكلني. ما أنا؟',opts:['المرض','الصدأ','الجوع','النار'],correctOpt:3,openEnded:false,ans:''},
+      {q:'لديّ مدن بلا بيوت، وجبال بلا أشجار، ومياه بلا أسماك. ما أنا؟',opts:['الصورة','الحلم','الخريطة','الرسم'],correctOpt:2,openEnded:false,ans:''},
+    ]
+  },
+  {
+    id:'history',icon:'📜',name:'تاريخ',desc:'أحداث وحضارات وشخصيات',
+    questions:[
+      {q:'في أي عام فتح المسلمون بقيادة صلاح الدين الأيوبي القدس؟',opts:['1187','1099','1244','1291'],correctOpt:0,openEnded:false,ans:''},
+      {q:'ما اسم الحضارة التي بنت مدينة ماتشو بيتشو؟',opts:['المايا','الأزتيك','الإنكا','الأولمك'],correctOpt:2,openEnded:false,ans:''},
+      {q:'من كان أول رئيس للولايات المتحدة الأمريكية؟',opts:['أبراهام لنكولن','بنجامين فرانكلين','توماس جيفرسون','جورج واشنطن'],correctOpt:3,openEnded:false,ans:''},
+      {q:'في أي عام سقط جدار برلين؟',opts:['1987','1989','1991','1993'],correctOpt:1,openEnded:false,ans:''},
+      {q:'ما اسم المعركة التي هزم فيها نابليون بونابرت نهائياً عام 1815؟',opts:['معركة أوسترليتز','معركة بورودينو','معركة واترلو','معركة ليبزيغ'],correctOpt:2,openEnded:false,ans:''},
+      {q:'أيّ إمبراطورية كانت الأوسع مساحةً في تاريخ البشرية؟',opts:['الإمبراطورية الرومانية','الإمبراطورية البريطانية','الإمبراطورية المغولية','إمبراطورية الإسكندر'],correctOpt:1,openEnded:false,ans:''},
+    ]
+  },
+];
 
-  general:[
-    {q:'في أي سنة أُعلن توحيد المملكة العربية السعودية؟',opts:['1902','1927','1932','1945'],correctOpt:2,openEnded:false,ans:''},
-    {q:'كم عدد العظام في جسم الإنسان البالغ؟',opts:['198','206','212','224'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما هو العنصر الأكثر وفرة في الكون؟',opts:['الأكسجين','الهيدروجين','الهيليوم','الكربون'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما هي أطول سورة في القرآن الكريم؟',opts:['آل عمران','النساء','البقرة','الأعراف'],correctOpt:2,openEnded:false,ans:''},
-    {q:'من هو مخترع المصباح الكهربائي عمليًا؟',opts:['نيوتن','تسلا','إديسون','غراهام بيل'],correctOpt:2,openEnded:false,ans:''},
-    {q:'كم عدد أضلاع الشكل السداسي؟',opts:['5','6','7','8'],correctOpt:1,openEnded:false,ans:''},
-  ],
+// Build DEFAULT_QUESTIONS index from DEFAULT_CATS for editor initialization
+const DEFAULT_QUESTIONS = {};
+DEFAULT_CATS.forEach(cat => {
+  DEFAULT_QUESTIONS[cat.id] = cat.questions.map(q => ({...q, opts:[...q.opts]}));
+});
 
-  geo:[
-    {q:'ما هي أكبر دولة في العالم من حيث المساحة؟',opts:['كندا','الصين','الولايات المتحدة','روسيا'],correctOpt:3,openEnded:false,ans:''},
-    {q:'ما هي الدولة التي يمر بها خط الاستواء وخط غرينتش معًا؟',opts:['البرازيل','الكونغو','إندونيسيا','غانا'],correctOpt:3,openEnded:false,ans:''},
-    {q:'ما هي عاصمة كازاخستان الحالية؟',opts:['ألماتي','أستانا','طشقند','كييف'],correctOpt:1,openEnded:false,ans:''},
-    {q:'أين يقع مضيق هرمز؟',opts:['بين عمان وإيران','بين السعودية ومصر','بين قطر والإمارات','بين العراق والكويت'],correctOpt:0,openEnded:false,ans:''},
-    {q:'ما أطول نهر في العالم وفق أحدث الدراسات؟',opts:['الأمازون','النيل','اليانغتسي','المسيسيبي'],correctOpt:0,openEnded:false,ans:''},
-    {q:'كم عدد دول قارة أفريقيا؟',opts:['52','54','56','58'],correctOpt:1,openEnded:false,ans:''},
-  ],
-
-  sports:[
-    {q:'من هو هداف كأس العالم 2014؟',opts:['ميسي','مولر','رونالدو','نيمار'],correctOpt:1,openEnded:false,ans:''},
-    {q:'كم مرة فازت البرازيل بكأس العالم؟',opts:['4','5','6','7'],correctOpt:1,openEnded:false,ans:''},
-    {q:'في أي دولة أُقيمت أول دورة ألعاب أولمبية حديثة؟',opts:['فرنسا','اليونان','إيطاليا','ألمانيا'],correctOpt:1,openEnded:false,ans:''},
-    {q:'كم طول مضمار سباق 400 متر؟',opts:['200م','300م','400م','500م'],correctOpt:2,openEnded:false,ans:''},
-    {q:'من أكثر لاعب تتويجًا بدوري أبطال أوروبا؟',opts:['رونالدو','ميسي','راموس','مودريتش'],correctOpt:0,openEnded:false,ans:''},
-    {q:'كم عدد أشواط مباراة كرة السلة الرسمية؟',opts:['2','3','4','5'],correctOpt:2,openEnded:false,ans:''},
-  ],
-
-  science:[
-    {q:'ما هو أسرع شيء في الكون؟',opts:['الصوت','الضوء','الرياح','الكهرباء'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما اسم المجرة التي ينتمي إليها كوكب الأرض؟',opts:['أندروميدا','درب التبانة','سومبريرو','المرأة المسلسلة'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما عدد أزواج الكروموسومات في الإنسان؟',opts:['23','46','44','48'],correctOpt:0,openEnded:false,ans:''},
-    {q:'من وضع قانون الجاذبية؟',opts:['آينشتاين','نيوتن','غاليلو','كوبرنيكوس'],correctOpt:1,openEnded:false,ans:''},
-    {q:'ما العنصر الذي رمزه Fe؟',opts:['فضة','فلور','حديد','فسفور'],correctOpt:2,openEnded:false,ans:''},
-    {q:'كم عدد صمامات القلب؟',opts:['2','3','4','5'],correctOpt:2,openEnded:false,ans:''},
-  ],
-
-  riddles:[
-    {q:'ما هو الشيء الذي كلما أخذت منه كبر أكثر وأكثر؟',opts:['الحفرة','السر','النار','الظل'],correctOpt:0,openEnded:false,ans:''},
-    {q:'أخضر في الأرض وأسود في السوق وأحمر في البيت، ما هو؟',opts:['الشاي','الفلفل','القهوة','البطيخ'],correctOpt:2,openEnded:false,ans:''},
-    {q:'شيء يمشي ويقف وليس له أرجل، ما هو؟',opts:['الساعة','النهر','السيارة','القلم'],correctOpt:0,openEnded:false,ans:''},
-    {q:'ما هو الباب الذي لا يمكن فتحه؟',opts:['باب الغرفة','باب السيارة','الباب المفتوح','الباب في الحلم'],correctOpt:3,openEnded:false,ans:''},
-    {q:'شيء يولد كبيرًا ثم يصغر مع الوقت، ما هو؟',opts:['العمر','الشجرة','الشمعة','القمر'],correctOpt:2,openEnded:false,ans:''},
-    {q:'له رأس ولا عين له، ما هو؟',opts:['الدبوس','الإنسان','الحجر','الساعة'],correctOpt:0,openEnded:false,ans:''},
-  ],
-
-};
-  
 const BOX_PTS=[200,400,600];
 let selCatIds=[],questionsData={};
 let teams=[{name:'',pts:0},{name:'',pts:0}];
@@ -525,10 +525,9 @@ let timerIv=null,timeLeft=30;
 let ansRevealed=false;
 
 // ==================== TOAST ====================
-function showToast(msg, type='info', duration=2800){
+function showToast(msg,type='info',duration=2800){
   const wrap=document.getElementById('toast-wrap');
-  const t=document.createElement('div');
-  t.className=`toast ${type}`;
+  const t=document.createElement('div');t.className=`toast ${type}`;
   const icons={success:'✅',error:'❌',info:'⚡'};
   t.innerHTML=`<span>${icons[type]||'⚡'}</span>${msg}`;
   wrap.appendChild(t);
@@ -536,48 +535,34 @@ function showToast(msg, type='info', duration=2800){
 }
 
 // ==================== CONFIRM MODAL ====================
-let _confirmCb=null;
 function showConfirm(msg,icon,cb){
   document.getElementById('confirm-msg').textContent=msg;
   document.getElementById('confirm-icon').textContent=icon||'🗑';
   document.getElementById('confirm-yes-btn').onclick=()=>{closeConfirm();cb&&cb();};
   const ov=document.getElementById('confirm-overlay');
-  ov.style.display='flex';
+  ov.style.display='flex';ov.classList.add('open');
 }
 function closeConfirm(){
-  document.getElementById('confirm-overlay').style.display='none';
+  const ov=document.getElementById('confirm-overlay');
+  ov.style.display='none';ov.classList.remove('open');
 }
 document.getElementById('confirm-overlay').addEventListener('click',function(e){if(e.target===this)closeConfirm();});
 
-
+// ==================== LEADERBOARD ====================
 const LB_KEY='quizbattle_leaderboard';
 let leaderboard=[];
 let editingLBId=null;
-
-function loadLB(){
-  try{const d=localStorage.getItem(LB_KEY);leaderboard=d?JSON.parse(d):[];}
-  catch(e){leaderboard=[];}
-}
-function saveLB(){
-  try{localStorage.setItem(LB_KEY,JSON.stringify(leaderboard));}
-  catch(e){}
-}
+function loadLB(){try{const d=localStorage.getItem(LB_KEY);leaderboard=d?JSON.parse(d):[];}catch(e){leaderboard=[];}}
+function saveLB(){try{localStorage.setItem(LB_KEY,JSON.stringify(leaderboard));}catch(e){}}
 loadLB();
-
 function showLB(){stopMusic();renderLB();showScreen('s-lb');}
-
 function renderLB(){
   const list=document.getElementById('lb-list');
   const data=[...leaderboard].sort((a,b)=>b.pts-a.pts);
-  if(!data.length){
-    list.innerHTML='<div class="lb-empty">لا يوجد فرق بعد 🎯<br><span style="font-size:.75rem;color:var(--muted)">أضف فريق أو العب مباراة واحفظ نتائجها</span></div>';
-    return;
-  }
-  const rankClasses=['r1','r2','r3'];
-  const rowClasses=['top1','top2','top3'];
+  if(!data.length){list.innerHTML='<div class="lb-empty">لا يوجد فرق بعد 🎯<br><span style="font-size:.75rem;color:var(--muted)">أضف فريق أو العب مباراة واحفظ نتائجها</span></div>';return;}
+  const rankClasses=['r1','r2','r3'];const rowClasses=['top1','top2','top3'];
   list.innerHTML=data.map((entry,i)=>{
-    const rk=i<3?rankClasses[i]:'rx';
-    const rc=i<3?rowClasses[i]:'';
+    const rk=i<3?rankClasses[i]:'rx';const rc=i<3?rowClasses[i]:'';
     const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1;
     return `<div class="lb-row ${rc}">
       <div class="lb-rank ${rk}">${medal}</div>
@@ -586,106 +571,65 @@ function renderLB(){
         <button class="lb-edit-btn" onclick="openEditModal('${entry.id}')">✏️ تعديل</button>
         <button class="lb-del-btn" onclick="deleteLBEntry('${entry.id}')">🗑</button>
       </div>
-      <div class="lb-pts-grp">
-        <div class="lb-pts">${entry.pts}</div>
-        <div class="lb-pts-lbl">نقطة</div>
-      </div>
+      <div class="lb-pts-grp"><div class="lb-pts">${entry.pts}</div><div class="lb-pts-lbl">نقطة</div></div>
     </div>`;
   }).join('');
 }
-
 function openAddModal(){
   editingLBId=null;
   document.getElementById('modal-title').textContent='إضافة فريق';
-  document.getElementById('modal-name').value='';
-  document.getElementById('modal-pts').value='';
+  document.getElementById('modal-name').value='';document.getElementById('modal-pts').value='';
   document.getElementById('lb-modal').classList.add('open');
   setTimeout(()=>document.getElementById('modal-name').focus(),100);
 }
-
 function openEditModal(id){
-  const entry=leaderboard.find(e=>e.id===id);
-  if(!entry)return;
+  const entry=leaderboard.find(e=>e.id===id);if(!entry)return;
   editingLBId=id;
   document.getElementById('modal-title').textContent='تعديل الفريق';
-  document.getElementById('modal-name').value=entry.name;
-  document.getElementById('modal-pts').value=entry.pts;
+  document.getElementById('modal-name').value=entry.name;document.getElementById('modal-pts').value=entry.pts;
   document.getElementById('lb-modal').classList.add('open');
   setTimeout(()=>document.getElementById('modal-name').focus(),100);
 }
-
-function closeModal(){
-  document.getElementById('lb-modal').classList.remove('open');
-  editingLBId=null;
-}
-
+function closeModal(){document.getElementById('lb-modal').classList.remove('open');editingLBId=null;}
 function saveModalEntry(){
   const name=document.getElementById('modal-name').value.trim();
   const pts=parseInt(document.getElementById('modal-pts').value)||0;
   if(!name){document.getElementById('modal-name').style.borderColor='#ff3737';return;}
   document.getElementById('modal-name').style.borderColor='';
-  if(editingLBId){
-    const entry=leaderboard.find(e=>e.id===editingLBId);
-    if(entry){entry.name=name;entry.pts=pts;}
-  } else {
-    leaderboard.push({id:'lb_'+Date.now()+'_'+Math.random().toString(36).slice(2),name,pts});
-  }
-  saveLB();
-  closeModal();
-  renderLB();
-  showToast(editingLBId?'تم تعديل الفريق ✏️':'تمت الإضافة بنجاح 🎉', 'success');
+  if(editingLBId){const entry=leaderboard.find(e=>e.id===editingLBId);if(entry){entry.name=name;entry.pts=pts;}}
+  else{leaderboard.push({id:'lb_'+Date.now()+'_'+Math.random().toString(36).slice(2),name,pts});}
+  saveLB();closeModal();renderLB();
+  showToast(editingLBId?'تم تعديل الفريق ✏️':'تمت الإضافة بنجاح 🎉','success');
 }
-
 function deleteLBEntry(id){
-  const entry=leaderboard.find(e=>e.id===id);
-  if(!entry)return;
+  const entry=leaderboard.find(e=>e.id===id);if(!entry)return;
   showConfirm(`حذف فريق "${entry.name}"؟`,'🗑',()=>{
-    leaderboard=leaderboard.filter(e=>e.id!==id);
-    saveLB();renderLB();
-    showToast(`تم حذف "${entry.name}"`, 'error');
+    leaderboard=leaderboard.filter(e=>e.id!==id);saveLB();renderLB();
+    showToast(`تم حذف "${entry.name}"`,'error');
   });
 }
-
 function clearLB(){
   if(!leaderboard.length){showToast('لوحة النتائج فارغة أصلاً','info');return;}
-  showConfirm('مسح جميع النتائج نهائياً؟','⚠️',()=>{
-    leaderboard=[];saveLB();renderLB();
-    showToast('تم مسح جميع النتائج','error');
-  });
+  showConfirm('مسح جميع النتائج نهائياً؟','⚠️',()=>{leaderboard=[];saveLB();renderLB();showToast('تم مسح جميع النتائج','error');});
 }
-
-// Close modal on overlay click
 document.getElementById('lb-modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
-
-// keyboard enter on modal
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&document.getElementById('lb-modal').classList.contains('open'))saveModalEntry();});
-
-// Save game result to LB
 function saveResultToLB(){
-  teams.forEach(t=>{
-    if(t.name&&t.pts>=0){
-      leaderboard.push({id:'lb_'+Date.now()+'_'+Math.random().toString(36).slice(2),name:t.name,pts:t.pts});
-    }
-  });
+  teams.forEach(t=>{if(t.name&&t.pts>=0)leaderboard.push({id:'lb_'+Date.now()+'_'+Math.random().toString(36).slice(2),name:t.name,pts:t.pts});});
   saveLB();
-  document.getElementById('r-save-lb-btn').textContent='✅ تم الحفظ!';
-  document.getElementById('r-save-lb-btn').disabled=true;
-  document.getElementById('r-save-lb-btn').style.color='#00d26e';
-  document.getElementById('r-save-lb-btn').style.borderColor='#00d26e';
+  const btn=document.getElementById('r-save-lb-btn');
+  btn.textContent='✅ تم الحفظ!';btn.disabled=true;btn.style.color='#00d26e';btn.style.borderColor='#00d26e';
   showToast('تم حفظ النتائج في لوحة المتصدرين 🏅','success');
 }
 
-// ==================== GAME LOGIC ====================
-function showScreen(id){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
+// ==================== SCREENS ====================
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
 
+// ==================== SETUP ====================
 function buildSetup(){
   const g=document.getElementById('setup-grid');g.innerHTML='';
   DEFAULT_CATS.forEach(cat=>{
-    const el=document.createElement('div');
-    el.className='scat';el.id='sc-'+cat.id;
+    const el=document.createElement('div');el.className='scat';el.id='sc-'+cat.id;
     el.innerHTML=`<div class="scat-chk">✓</div><div class="scat-icon">${cat.icon}</div><div class="scat-name">${cat.name}</div><div class="scat-desc">${cat.desc}</div><div class="scat-meta"><span class="spill">6 أسئلة</span><span class="spill">200/400/600</span></div>`;
     el.onclick=()=>toggleCat(cat.id);g.appendChild(el);
   });
@@ -700,7 +644,6 @@ function toggleCat(id){
   bar.textContent=n+' فئة محددة';bar.classList.toggle('has',n>0);
   document.getElementById('to-q-btn').disabled=n===0;
 }
-
 function initQData(catId){
   if(!questionsData[catId]){
     questionsData[catId]=DEFAULT_QUESTIONS[catId]
@@ -710,8 +653,7 @@ function initQData(catId){
 }
 function goQuestions(){buildQEditor();showScreen('s-questions');}
 function buildQEditor(){
-  const tabsEl=document.getElementById('cat-tabs');
-  const sectEl=document.getElementById('cat-sections');
+  const tabsEl=document.getElementById('cat-tabs');const sectEl=document.getElementById('cat-sections');
   tabsEl.innerHTML='';sectEl.innerHTML='';
   selCatIds.forEach((catId,ci)=>{
     initQData(catId);
@@ -723,8 +665,7 @@ function buildQEditor(){
     const sec=document.createElement('div');
     sec.className='qed-section'+(ci===0?' show':'');sec.id='sec-'+catId;
     BOX_PTS.forEach((pts,pIdx)=>{
-      const grp=document.createElement('div');grp.className='pts-group-lbl';
-      grp.textContent=`${pts} نقطة — سؤالان`;sec.appendChild(grp);
+      const grp=document.createElement('div');grp.className='pts-group-lbl';grp.textContent=`${pts} نقطة — سؤالان`;sec.appendChild(grp);
       [0,1].forEach(qi=>{
         const gi=pIdx*2+qi;const qd=questionsData[catId][gi];
         const box=document.createElement('div');box.className='qbox';
@@ -788,9 +729,9 @@ function goTeams(){
   showScreen('s-teams');
 }
 
+// ==================== GAME ====================
 function startGame(){
-  const t1=document.getElementById('t1').value.trim();
-  const t2=document.getElementById('t2').value.trim();
+  const t1=document.getElementById('t1').value.trim();const t2=document.getElementById('t2').value.trim();
   let ok=true;
   if(!t1){document.getElementById('e1').style.display='block';ok=false;}else document.getElementById('e1').style.display='none';
   if(!t2){document.getElementById('e2').style.display='block';ok=false;}else document.getElementById('e2').style.display='none';
@@ -798,16 +739,12 @@ function startGame(){
   teams=[{name:t1,pts:0},{name:t2,pts:0}];
   curTurn=0;lifelines=[{call:false,two:false,hole:false},{call:false,two:false,hole:false}];boxUsed={};
   selCatIds.forEach(id=>{boxUsed[id]=[[false,false],[false,false],[false,false]];});
-  document.getElementById('sc-n1').textContent=t1;
-  document.getElementById('sc-n2').textContent=t2;
+  document.getElementById('sc-n1').textContent=t1;document.getElementById('sc-n2').textContent=t2;
   updateScore();buildBoard();showScreen('s-game');
 }
-
 function updateScore(){
-  document.getElementById('sc-p1').textContent=teams[0].pts;
-  document.getElementById('sc-p2').textContent=teams[1].pts;
-  document.getElementById('sct1').classList.toggle('act',curTurn===0);
-  document.getElementById('sct2').classList.toggle('act',curTurn===1);
+  document.getElementById('sc-p1').textContent=teams[0].pts;document.getElementById('sc-p2').textContent=teams[1].pts;
+  document.getElementById('sct1').classList.toggle('act',curTurn===0);document.getElementById('sct2').classList.toggle('act',curTurn===1);
   document.getElementById('turn-name').textContent=teams[curTurn].name;
 }
 function buildBoard(){
@@ -819,7 +756,7 @@ function buildBoard(){
     center.innerHTML=`<div class="col-icon">${cat.icon}</div><div class="col-name">${cat.name}</div>`;
     col.appendChild(center);
     BOX_PTS.forEach((pts,pIdx)=>{
-      const row=document.createElement('div');row.className='pts-row';row.id=`row-${catId}-${pIdx}`;
+      const row=document.createElement('div');row.className='pts-row';
       row.appendChild(makePtsNum(catId,pIdx,0,'L'));
       row.appendChild(makePtsNum(catId,pIdx,1,'R'));
       col.appendChild(row);
@@ -838,8 +775,7 @@ function makePtsNum(catId,pIdx,qi,side){
 function refreshBoard(){
   selCatIds.forEach(catId=>BOX_PTS.forEach((_,pIdx)=>{
     [[0,'L'],[1,'R']].forEach(([qi,side])=>{
-      const el=document.getElementById(`px-${catId}-${pIdx}-${qi}-${side}`);
-      if(!el)return;
+      const el=document.getElementById(`px-${catId}-${pIdx}-${qi}-${side}`);if(!el)return;
       const used=boxUsed[catId][pIdx][qi];
       el.className='pts-box'+(used?' used':'');
       if(!used){el.textContent=BOX_PTS[pIdx];el.onclick=()=>openBox(catId,pIdx,qi);}
@@ -849,7 +785,6 @@ function refreshBoard(){
   const allDone=selCatIds.every(catId=>BOX_PTS.every((_,pIdx)=>[0,1].every(qi=>boxUsed[catId][pIdx][qi])));
   if(allDone)setTimeout(endGame,1200);
 }
-
 function openBox(catId,pIdx,qi){
   initQData(catId);
   const cat=DEFAULT_CATS.find(c=>c.id===catId);
@@ -860,18 +795,14 @@ function openBox(catId,pIdx,qi){
   document.getElementById('qm-pts-main').textContent=pts+' نقطة';
   document.getElementById('qm-cat-main').textContent=cat.icon+' '+cat.name;
   document.getElementById('q-text-main').textContent=qd.q;
-  document.getElementById('qt-name1').textContent=teams[0].name;
-  document.getElementById('qt-pts1').textContent=teams[0].pts;
-  document.getElementById('qt-name2').textContent=teams[1].name;
-  document.getElementById('qt-pts2').textContent=teams[1].pts;
-  document.getElementById('who-bt1').textContent=teams[0].name;
-  document.getElementById('who-bt2').textContent=teams[1].name;
+  document.getElementById('qt-name1').textContent=teams[0].name;document.getElementById('qt-pts1').textContent=teams[0].pts;
+  document.getElementById('qt-name2').textContent=teams[1].name;document.getElementById('qt-pts2').textContent=teams[1].pts;
+  document.getElementById('who-bt1').textContent=teams[0].name;document.getElementById('who-bt2').textContent=teams[1].name;
   document.getElementById('who-panel').style.display='none';
   updateLifelinesUI();
   const optsGrid=document.getElementById('q-opts-grid');optsGrid.innerHTML='';
   if(!qd.openEnded){
-    optsGrid.style.display='none';
-    document.getElementById('q-open-zone').style.display='none';
+    optsGrid.style.display='none';document.getElementById('q-open-zone').style.display='none';
     document.getElementById('q-mcq-actions').style.display='flex';
     const shuffled=[...qd.opts].sort(()=>Math.random()-.5);
     shuffled.forEach(opt=>{
@@ -879,8 +810,7 @@ function openBox(catId,pIdx,qi){
       b.onclick=()=>chooseOpt(b,opt,correct);optsGrid.appendChild(b);
     });
   } else {
-    optsGrid.style.display='none';
-    document.getElementById('q-open-zone').style.display='block';
+    optsGrid.style.display='none';document.getElementById('q-open-zone').style.display='block';
     document.getElementById('q-open-text').style.display='none';
     document.getElementById('q-open-text').textContent=qd.ans;
     document.getElementById('q-reveal-open-btn').style.display='inline-block';
@@ -888,19 +818,17 @@ function openBox(catId,pIdx,qi){
   }
   showScreen('s-question');startTimer(30);
 }
-
 function updateLifelinesUI(){
   [0,1].forEach(ti=>{
-    const prefix=`ll${ti+1}`;
-    document.getElementById(prefix+'-call').classList.toggle('used-ll',lifelines[ti].call);
-    document.getElementById(prefix+'-two').classList.toggle('used-ll',lifelines[ti].two);
-    document.getElementById(prefix+'-hole').classList.toggle('used-ll',lifelines[ti].hole);
+    const p=`ll${ti+1}`;
+    document.getElementById(p+'-call').classList.toggle('used-ll',lifelines[ti].call);
+    document.getElementById(p+'-two').classList.toggle('used-ll',lifelines[ti].two);
+    document.getElementById(p+'-hole').classList.toggle('used-ll',lifelines[ti].hole);
   });
 }
 function showAllOpts(){document.getElementById('q-opts-grid').style.display='grid';}
 function revealMCQAnswer(){
-  if(ansRevealed)return;
-  stopTimer();ansRevealed=true;showAllOpts();
+  if(ansRevealed)return;stopTimer();ansRevealed=true;showAllOpts();
   document.querySelectorAll('.q-opt-btn').forEach(b=>{
     b.classList.add('revealed');b.onclick=null;
     if(b.textContent===activeQ.ans)b.classList.add('correct');
@@ -909,8 +837,7 @@ function revealMCQAnswer(){
   document.getElementById('who-panel').style.display='flex';doFlash();
 }
 function chooseOpt(btn,chosen,correct){
-  if(ansRevealed)return;
-  stopTimer();ansRevealed=true;
+  if(ansRevealed)return;stopTimer();ansRevealed=true;
   document.querySelectorAll('.q-opt-btn').forEach(b=>{
     b.classList.add('revealed');b.onclick=null;
     if(b.textContent===correct)b.classList.add('correct');
@@ -920,8 +847,7 @@ function chooseOpt(btn,chosen,correct){
   document.getElementById('who-panel').style.display='flex';doFlash();
 }
 function revealOpen(){
-  if(ansRevealed)return;
-  stopTimer();ansRevealed=true;
+  if(ansRevealed)return;stopTimer();ansRevealed=true;
   document.getElementById('q-open-text').style.display='block';
   document.getElementById('q-reveal-open-btn').style.display='none';
   document.getElementById('who-panel').style.display='flex';doFlash();
@@ -930,8 +856,7 @@ function givePoint(ti){
   if(!activeQ)return;
   if(ti>=0){
     teams[ti].pts+=activeQ.pts;
-    // الحفرة: إذا الفريق الي فعّل الحفرة أجاب صح، يُخصم 600 من الفريق الثاني
-    if(activeQ._holePenalty && activeQ._holeTeam===ti){
+    if(activeQ._holePenalty&&activeQ._holeTeam===ti){
       const opponent=1-ti;
       const deduct=Math.min(activeQ.pts,teams[opponent].pts);
       teams[opponent].pts=Math.max(0,teams[opponent].pts-activeQ.pts);
@@ -942,12 +867,10 @@ function givePoint(ti){
   activeQ=null;stopTimer();curTurn=(curTurn+1)%2;
   updateScore();refreshBoard();showScreen('s-game');
 }
-
 function splitPoints(){
   if(!activeQ)return;
   const half=Math.floor(activeQ.pts/2);
-  teams[0].pts+=half;
-  teams[1].pts+=half;
+  teams[0].pts+=half;teams[1].pts+=half;
   showToast(`✂️ تم تقسيم ${activeQ.pts} نقطة — كل فريق أخذ ${half}`,'info');
   boxUsed[activeQ.catId][activeQ.pIdx][activeQ.qi]=true;
   activeQ=null;stopTimer();curTurn=(curTurn+1)%2;
@@ -956,17 +879,14 @@ function splitPoints(){
 function useLifeline(teamIdx,type){
   if(lifelines[teamIdx][type])return;
   lifelines[teamIdx][type]=true;updateLifelinesUI();
-  if(type==='call'){
-    alert(`📞 مساعدة الاتصال بصديق لـ ${teams[teamIdx].name}!\nالمضيف يتصل بالصديق الآن...`);
-  } else if(type==='two'){
-    if(!activeQ||activeQ.openEnded)return;
-    showAllOpts();
+  if(type==='call'){alert(`📞 مساعدة الاتصال بصديق لـ ${teams[teamIdx].name}!\nالمضيف يتصل بالصديق الآن...`);}
+  else if(type==='two'){
+    if(!activeQ||activeQ.openEnded)return;showAllOpts();
     const btns=Array.from(document.querySelectorAll('.q-opt-btn'));
     const wrong=btns.filter(b=>b.textContent!==activeQ.ans&&!b.classList.contains('hidden-ll'));
     wrong.sort(()=>Math.random()-.5).slice(0,2).forEach(b=>{b.classList.add('hidden-ll');b.onclick=null;});
   } else if(type==='hole'){
-    activeQ._holePenalty=true;
-    activeQ._holeTeam=teamIdx;
+    activeQ._holePenalty=true;activeQ._holeTeam=teamIdx;
     showToast(`🕳️ الحفرة مفعّلة لـ ${teams[teamIdx].name}! إذا أجابوا صح يُخصم ${activeQ?activeQ.pts:'نقاط السؤال'} من الخصم 💣`,'info',3500);
   }
 }
@@ -982,69 +902,36 @@ function timeUp(){if(!activeQ)return;if(!activeQ.openEnded)revealMCQAnswer();els
 function endGame(){
   stopTimer();
   const w=teams[0].pts>teams[1].pts?0:teams[1].pts>teams[0].pts?1:-1;
-  document.getElementById('rn1').textContent=teams[0].name;
-  document.getElementById('rp1').textContent=teams[0].pts;
-  document.getElementById('rn2').textContent=teams[1].name;
-  document.getElementById('rp2').textContent=teams[1].pts;
-  document.getElementById('rc1').classList.toggle('rw',w===0);
-  document.getElementById('rc2').classList.toggle('rw',w===1);
-  // Reset save button
+  document.getElementById('rn1').textContent=teams[0].name;document.getElementById('rp1').textContent=teams[0].pts;
+  document.getElementById('rn2').textContent=teams[1].name;document.getElementById('rp2').textContent=teams[1].pts;
+  document.getElementById('rc1').classList.toggle('rw',w===0);document.getElementById('rc2').classList.toggle('rw',w===1);
   const saveBtn=document.getElementById('r-save-lb-btn');
-  saveBtn.textContent='🏅 حفظ النتائج في لوحة النتائج';
-  saveBtn.disabled=false;
-  saveBtn.style.color='';saveBtn.style.borderColor='';
-  if(w<0){
-    document.getElementById('r-trophy').textContent='🤝';
-    document.getElementById('r-winner').textContent='تعادل!';
-    document.getElementById('r-sub').textContent='الفريقان متساويان';
-  }else{
-    document.getElementById('r-trophy').textContent='🏆';
-    document.getElementById('r-winner').textContent=teams[w].name;
-    document.getElementById('r-sub').textContent=`الفائز بـ ${teams[w].pts} نقطة 🎉`;
-  }
+  saveBtn.textContent='🏅 حفظ النتائج في لوحة النتائج';saveBtn.disabled=false;saveBtn.style.color='';saveBtn.style.borderColor='';
+  if(w<0){document.getElementById('r-trophy').textContent='🤝';document.getElementById('r-winner').textContent='تعادل!';document.getElementById('r-sub').textContent='الفريقان متساويان';}
+  else{document.getElementById('r-trophy').textContent='🏆';document.getElementById('r-winner').textContent=teams[w].name;document.getElementById('r-sub').textContent=`الفائز بـ ${teams[w].pts} نقطة 🎉`;}
   showScreen('s-result');if(w>=0){doConfetti();playVictoryMusic();}
 }
-
 function restartAll(){
-  stopMusic();
-  selCatIds=[];questionsData={};teams=[{name:'',pts:0},{name:'',pts:0}];curTurn=0;boxUsed={};activeQ=null;
+  stopMusic();selCatIds=[];questionsData={};teams=[{name:'',pts:0},{name:'',pts:0}];curTurn=0;boxUsed={};activeQ=null;
   lifelines=[{call:false,two:false,hole:false},{call:false,two:false,hole:false}];stopTimer();
   document.getElementById('t1').value='';document.getElementById('t2').value='';
   document.querySelectorAll('.scat').forEach(c=>c.classList.remove('sel'));
-  document.getElementById('sel-bar').textContent='0 فئة محددة';
-  document.getElementById('sel-bar').classList.remove('has');
-  document.getElementById('to-q-btn').disabled=true;
-  showScreen('s-cats');
+  document.getElementById('sel-bar').textContent='0 فئة محددة';document.getElementById('sel-bar').classList.remove('has');
+  document.getElementById('to-q-btn').disabled=true;showScreen('s-cats');
 }
-
 function doFlash(){const f=document.getElementById('flash');f.classList.add('on');setTimeout(()=>f.classList.remove('on'),180);}
 function doConfetti(){
   const cs=['#FFD700','#FFC200','#fff','#ffee00','#ff9900'];
   for(let i=0;i<90;i++)setTimeout(()=>{
     const e=document.createElement('div');e.className='cp';
-    Object.assign(e.style,{left:Math.random()*100+'vw',background:cs[Math.random()*cs.length|0],
-      width:(Math.random()*10+4)+'px',height:(Math.random()*10+4)+'px',
-      borderRadius:Math.random()>.5?'50%':'2px',animationDuration:(Math.random()*2+2)+'s'});
+    Object.assign(e.style,{left:Math.random()*100+'vw',background:cs[Math.random()*cs.length|0],width:(Math.random()*10+4)+'px',height:(Math.random()*10+4)+'px',borderRadius:Math.random()>.5?'50%':'2px',animationDuration:(Math.random()*2+2)+'s'});
     document.body.appendChild(e);setTimeout(()=>e.remove(),4000);
   },i*35);
 }
-
-// ==================== VICTORY MUSIC ====================
 let victoryAudio=null;
-
-function stopMusic(){
-  if(victoryAudio){
-    victoryAudio.pause();
-    victoryAudio.currentTime=0;
-    victoryAudio=null;
-  }
-}
-
+function stopMusic(){if(victoryAudio){victoryAudio.pause();victoryAudio.currentTime=0;victoryAudio=null;}}
 function playVictoryMusic(){
-  stopMusic();
-  victoryAudio=new Audio('Download.mp4');
-  victoryAudio.loop=false;
-  victoryAudio.volume=0.8;
+  stopMusic();victoryAudio=new Audio('Download.mp4');victoryAudio.loop=false;victoryAudio.volume=0.8;
   victoryAudio.play().catch(e=>console.log('audio blocked:',e));
 }
 
